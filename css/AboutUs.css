@@ -1,0 +1,145 @@
+.const {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 85vh; /* ngắn hơn màn hình */
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+}
+
+
+.constLeft {
+  flex: 1 1 50%;
+  background-color: rgb(237, 220, 230);
+  padding: 0 10%; 
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.constLeft p {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.constLeft h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom:10px;
+    text-align: center;
+
+}
+
+
+.constRight {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.constRight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+}
+
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+
+.nearlast {
+  display: flex;
+  height: 400px;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.nearlast-left {
+  flex: 2; /* bên trái to hơn */
+  position: relative;
+  background-color: #F3DD8B;
+  justify-content: center; /* canh giữa ngang */
+  align-items: center;     /* canh giữa dọc */
+}
+
+.nearlast-left h2{
+    display: flex;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #724E33;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+
+}
+
+.nearlast-right {
+  flex: 0.7; /* bên phải nhỏ hơn */
+
+}
+
+.nearlast-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  scale: 1;
+  
+}
+
+
+@media (max-width: 768px) {
+  .const {
+    flex-direction: column;
+  }
+  .constRight {
+    display: none;
+  }
+  .nearlast {
+    flex-direction: column;
+    padding: 0;
+    height: 500px;
+  }
+  .nearlast-right {
+    order: 1;
+    padding: 0;
+    width : 50%;
+    text-align: center;
+    margin-left: 115px;
+  }
+  .nearlast-right img {
+    text-align: center;
+  }
+  .nearlast-left {
+    order: 2;
+  }
+
+  .nearlast-left h2 {
+    width: 100%;
+  }
+  .const {
+    height: 400px;
+  }
+
+}
